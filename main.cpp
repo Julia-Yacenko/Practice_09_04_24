@@ -36,8 +36,7 @@ int main()
 	int frame_width = cap.get(cv::CAP_PROP_FRAME_WIDTH);
 	int frame_height = cap.get(cv::CAP_PROP_FRAME_HEIGHT);
 
-	VideoWriter video;
-	video.open("./outface.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), cap.get(cv::CAP_PROP_FPS), cv::Size(frame_width, frame_height), true);
+	VideoWriter video("./outface.mp4", cv::VideoWriter::fourcc('A', 'V', 'C', '1'), cap.get(cv::CAP_PROP_FPS), cv::Size(frame_width * 0.6, frame_height * 0.6));
 
 	namedWindow("Output Video");
 
